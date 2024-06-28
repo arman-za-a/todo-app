@@ -1,0 +1,17 @@
+@import "variables";
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+.label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $white;
+}

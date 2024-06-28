@@ -1,0 +1,17 @@
+@import "variables";
+$radius: 5px;
+.container {
+    background-color: $white;
+}
+.header {
+    text-align: center;
+    line-height: 50px;
+    border-radius: $radius $radius 0 0;
+}
+.title {
+    color: $white;
+    font-size: 1.3rem;
+}
+.tasks {
+    padding: 0 15px;
+}

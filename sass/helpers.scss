@@ -1,0 +1,15 @@
+@import "variables";
+.bg {
+    &_todo {
+        background-color: $yellow;
+    }
+    &_progress {
+        background-color: $lighGreen;
+    }
+    &_review {
+        background-color: $blue;
+    }
+    &_done {
+        background-color: $cyan;
+    }
+}

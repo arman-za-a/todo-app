@@ -1,0 +1,103 @@
+@import "variables";
+.container {
+    direction: ltr;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: $notificationWidth;
+    height: 65px;
+    padding: 8px;
+    margin-bottom: 16px;
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: $boxShadow;
+    overflow: hidden;
+    z-index: 5;
+    animation: 0.2s ease-in forwards;
+}
+.body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $mainGray;
+}
+.typeIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: $white;
+}
+.progressbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    animation: 5s linear forwards;
+}
+.unRounded {
+    border-bottom-right-radius: 0;
+}
+.xIcon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.bg {
+    &Success {
+        background-color: $green;
+    }
+    &Error {
+        background-color: $red;
+    }
+}
+.appearAnimating {
+    animation-name: appear;
+}
+.hideAnimating {
+    animation-name: hide;
+}
+.timerAnimating {
+    animation-name: timer;
+}
+.running {
+    animation-play-state: running;
+}
+.paused {
+    animation-play-state: paused;
+}
+@keyframes appear {
+    0% {
+        transform: translateX($notificationStartTranslateX);
+    }
+    90% {
+        transform: translateX($notificationMiddleTranslateX);
+    }
+    100% {
+        transform: translateX($notificationFinalTranslateX);
+    }
+}
+@keyframes hide {
+    0% {
+        transform: translateX($notificationFinalTranslateX);
+    }
+    10% {
+        transform: translateX($notificationMiddleTranslateX);
+    }
+    100% {
+        transform: translateX($notificationStartTranslateX);
+    }
+}
+@keyframes timer {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}

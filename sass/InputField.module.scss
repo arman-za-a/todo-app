@@ -1,0 +1,11 @@
+@import "variables";
+@import "mixins";
+.label {
+    display: block;
+    color: $mainGray;
+    font-size: 1.3rem;
+}
+.input {
+    @include input($width: 500px);
+    margin: 5px 0 50px;
+}

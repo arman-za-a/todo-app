@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixins";
+.container {
+    padding: 30px;
+}
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $black;
+    margin-bottom: 30px;
+}
+.submitButton {
+    @include button();
+    margin-top: 10px;
+}

@@ -1,0 +1,31 @@
+@import "variables";
+@import "mixins";
+.container {
+    width: 300px;
+    margin: 100px auto 0;
+}
+.form {
+    padding: 50px;
+    border-radius: 20px;
+    background-color: $white;
+    text-align: center;
+    box-shadow: $boxShadow;
+}
+.title {
+    margin-bottom: 50px;
+    color: $black;
+}
+.input {
+    @include input();
+    margin-bottom: 30px;
+}
+.submitButton {
+    @include button();
+    margin-bottom: 50px;
+}
+.attention {
+    color: $mainGray;
+}
+.link {
+    color: $blue;
+}

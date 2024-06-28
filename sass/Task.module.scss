@@ -1,0 +1,61 @@
+@import "variables";
+.container {
+    position: relative;
+    margin: 25px 0;
+    padding: 15px;
+    box-shadow: $boxShadow;
+}
+.actionIcons {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.actionIcon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    &last-child {
+        margin-left: 5px;
+    }
+}
+.bar {
+    width: 50%;
+    height: 3px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+.title {
+    word-break: break-all;
+}
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+.direction {
+    &Left {
+        direction: ltr;
+    }
+    &Right {
+        direction: rtl;
+    }
+}
+%actionButton {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    line-height: 15px
+}
+.button {
+    &Back {
+        @extend %actionButton;
+        background-color: #f8eccf;
+        color: #e5a000;
+    }
+    &Next {
+        @extend %actionButton;
+        background-color: #cdf8ee;
+        color: #03ab81;
+    }
+}

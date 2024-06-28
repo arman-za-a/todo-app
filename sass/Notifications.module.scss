@@ -1,0 +1,10 @@
+@import "variables";
+.container {
+    direction: rtl;
+    position: fixed;
+    top: 30px;
+    right: 0;
+    width: $notificationWidth + (-$notificationMiddleTranslateX);
+    overflow: hidden;
+    z-index: 100;
+}
